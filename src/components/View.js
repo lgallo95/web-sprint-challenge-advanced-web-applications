@@ -29,7 +29,13 @@ const View = (props) => {
       });
   };
 
-  const handleEdit = (article) => {};
+  const handleEdit = (article) => {
+    axiosWithAuth()
+    .put(`/${editId}`, article)
+    .then (resp => {
+        setArticles(resp.data)
+    })
+  };
 
   const handleEditSelect = (id) => {
     setEditing(true);
@@ -72,7 +78,6 @@ const View = (props) => {
 };
 
 export default View;
-
 //Task List:
 //1. Build and import axiosWithAuth module in the utils.
 //2. When the component mounts, make an http request that adds all articles to state.
@@ -111,3 +116,5 @@ const ContentContainer = styled.div`
 const ArticleContainer = styled.div`
   background: grey;
 `;
+
+
