@@ -133,7 +133,7 @@ A web server stores the code for different websites to be shared across the worl
 
 4. Which HTTP methods can be mapped to the CRUD acronym that we use when interfacing with APIs/Servers.
 
-Create Post
-Read Get
-Update Put
-Delete Delete
+1. Create: Post
+2. Read: Get
+3. Update: Put
+4. Delete: Delete
