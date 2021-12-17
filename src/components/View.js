@@ -19,8 +19,8 @@ const View = (props) => {
   }, []);
 
   const handleDelete = (id) => {
-    axios
-      .delete(`http://localhost:5000/items/:${id}`)
+    axiosWithAuth()
+      .delete(id)
       .then((resp) => {
         setArticles(resp.data);
       })
