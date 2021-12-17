@@ -54,9 +54,13 @@ test('renders "Associated Press" when no author is given', ()=> {
 
 test('executes handleDelete when the delete button is pressed', async ()=> {
     const mock = jest.fn()
+    
     render(<Article article ={testDataA} handleDelete = {mock}  />);
+
     const button = await screen.findByTestId('deleteButton')
+
     userEvent.click(button)
+
     await waitFor(() => expect(mock).toBeCalled())
 
 });
